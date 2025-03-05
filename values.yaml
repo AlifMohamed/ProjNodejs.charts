@@ -1,0 +1,13 @@
+image:
+  repository: my-backend
+  tag: latest
+  pullPolicy: Never  # Don't pull from an external registry
+
+namespace: "devops-poc"
+replicaCount: 1
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 3001
+  nodePort: 30001
