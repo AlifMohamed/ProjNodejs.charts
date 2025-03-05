@@ -3,7 +3,7 @@ image:
   tag: latest
   pullPolicy: Never  # Don't pull from an external registry
 
-namespace: "devops-poc"
+namespace: "default"
 replicaCount: 1
 
 service:
