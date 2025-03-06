@@ -1,5 +1,5 @@
 image:
-  repository: my-backend
+  repository: my-backend-2
   tag: latest
   pullPolicy: Never  # Don't pull from an external registry
 
