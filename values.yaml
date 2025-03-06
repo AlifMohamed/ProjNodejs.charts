@@ -7,7 +7,7 @@ namespace: "default"
 replicaCount: 1
 
 service:
-  type: NodePort
+  type: ClusterIP
   port: 80
   targetPort: 3001
   nodePort: 30001
