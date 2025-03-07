@@ -1,18 +1,18 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: backend-hpa # Name of the HPA resource
-  namespace: {{ .Values.namespace  }} # Namespace where it is deployed
+  name: backend-hpa
+  namespace: {{ .Values.namespace  }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
-    name: backend # Matches the deployment name you want to scale
+    name: backend
   minReplicas: {{ .Values.hpa.minReplicas }}
   maxReplicas: {{ .Values.hpa.maxReplicas }}
   metrics:
     - type: Resource
       resource:
-        name: cpu #Scale based on CPU
+        name: cpu
         target:
           type: Utilization
-          averageUtilization: {{ .Values.hpa.targetCPUUtilizationPercentage }} #Utilization condition: # If CPU > 80%, increase pods
+          averageUtilization: {{ .Values.hpa.targetCPUUtilizationPercentage }}
