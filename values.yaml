@@ -11,3 +11,9 @@ service:
   port: 80
   targetPort: 3001
   nodePort: 30001
+
+hpa:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 80
