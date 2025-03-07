@@ -1,10 +1,10 @@
 image:
-  repository: my-backend
+  repository: my-backend-prod
   tag: latest
   pullPolicy: Never
 
 namespace: "default"
-replicaCount: 1
+replicaCount: 2
 
 service:
   type: NodePort
@@ -14,6 +14,6 @@ service:
 
 hpa:
   enabled: true
-  minReplicas: 1
-  maxReplicas: 2
+  minReplicas: 2
+  maxReplicas: 4
   targetCPUUtilizationPercentage: 80
