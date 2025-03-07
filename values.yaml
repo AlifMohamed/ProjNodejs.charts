@@ -1,5 +1,5 @@
 image:
-  repository: my-backend-2
+  repository: my-backend-3
   tag: latest
   pullPolicy: Never
 
